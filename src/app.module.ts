@@ -9,6 +9,7 @@ import { AuthGuard } from './common/guards/auth.guard';
 import { CategoriaModule } from './modules/categoria/categoria.module';
 import { ContaModule } from './modules/conta/conta.module';
 import { InstituicaoFinanceiraModule } from './modules/instituicao-financeira/instituicao-financeira.module';
+import { MovimentacaoModule } from './modules/movimentacao/movimentacao.module';
 import { PessoaModule } from './modules/pessoa/pessoa.module';
 import { TipoContaModule } from './modules/tipo-conta/tipo-conta.module';
 import { TipoMovimentacaoModule } from './modules/tipo-movimentacao/tipo-movimentacao.module';
@@ -38,6 +39,7 @@ import { UsuarioModule } from './modules/usuario/usuario.module';
     InstituicaoFinanceiraModule,
     TipoContaModule,
     ContaModule,
+    MovimentacaoModule
   ],
   controllers: [AppController],
   providers: [
