@@ -12,6 +12,7 @@ export class AppController {
   @Get()
   @Public()
   getInfo() {
-    return this.appService.getInfo();
+    return {msg: 'hello world'};
+    // return this.appService.getInfo();
   }
 }
