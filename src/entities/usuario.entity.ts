@@ -39,7 +39,7 @@ export class Usuario extends BaseColumn {
 
   @ApiProperty()
   @IsOptional()
-  @Column({ type: 'smallint', nullable: false, default: 0 })
+  @Column({ type: 'smallint', nullable: false, default: 1 })
   status?: number;
 
   @ApiProperty({ type: () => Pessoa })

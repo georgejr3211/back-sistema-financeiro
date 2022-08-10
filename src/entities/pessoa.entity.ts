@@ -28,17 +28,16 @@ export class Pessoa extends BaseColumn {
   @Column({ length: 80, nullable: false })
   sobrenome: string;
 
+  @ApiProperty()
+  @IsOptional({ groups: [UPDATE] })
+  @Column({ length: 12, nullable: true })
+  celular: string;
+
   // @ApiProperty()
   // @IsDefined({ groups: [CREATE] })
   // @IsOptional({ groups: [UPDATE] })
-  // @Column({ length: 12, nullable: false })
-  // celular: string;
-
-  @ApiProperty()
-  @IsDefined({ groups: [CREATE] })
-  @IsOptional({ groups: [UPDATE] })
-  @Column({ name: 'dt_nascimento', type: 'date', nullable: false })
-  dtNascimento: Date;
+  // @Column({ name: 'dt_nascimento', type: 'date', nullable: false })
+  // dtNascimento: Date;
 
   @ApiProperty({ type: () => Usuario })
   @OneToOne(() => Usuario, usuario => usuario.pessoa, { nullable: false })
