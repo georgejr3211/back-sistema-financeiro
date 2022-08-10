@@ -4,13 +4,16 @@
   "description": "",
   "author": "",
   "license": "MIT",
+  "engines": {
+    "node": "14.16.1"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "set NODE_ENV=production && npm install && nest build && node dist/main.js",
+    "start": "npm install && nest build && node dist/main.js",
     "start:local": "nest start --watch",
-    "start:dev": "set NODE_ENV=develop && npm run start:prod",
+    "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "nest-start": "nest start --watch",
