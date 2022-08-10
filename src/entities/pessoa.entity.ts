@@ -28,11 +28,11 @@ export class Pessoa extends BaseColumn {
   @Column({ length: 80, nullable: false })
   sobrenome: string;
 
-  @ApiProperty()
-  @IsDefined({ groups: [CREATE] })
-  @IsOptional({ groups: [UPDATE] })
-  @Column({ length: 12, nullable: false })
-  celular: string;
+  // @ApiProperty()
+  // @IsDefined({ groups: [CREATE] })
+  // @IsOptional({ groups: [UPDATE] })
+  // @Column({ length: 12, nullable: false })
+  // celular: string;
 
   @ApiProperty()
   @IsDefined({ groups: [CREATE] })
