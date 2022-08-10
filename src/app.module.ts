@@ -20,13 +20,13 @@ import { UsuarioModule } from './modules/usuario/usuario.module';
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: process.env.DB_HOST,
-      username: process.env.DB_USER,
-      password: process.env.DB_PASS,
-      database: process.env.DB_NAME,
-      port: Number(process.env.DB_PORT),
+      host: 'ec2-34-235-31-124.compute-1.amazonaws.com',
+      username: 'tbhhkkoruveshh',
+      password: '327971a3a90af0153334a796cd4431dc36b74599312dc69161adab2147343824',
+      database: 'd9fni0vrogk6q',
+      port: 5432,
       autoLoadEntities: true,
-      synchronize: Number(process.env.SYNCHRONIZE) ? true : false
+      synchronize: true
     }),
     UsuarioModule,
     PessoaModule,
