@@ -46,11 +46,11 @@ export class UsuarioService extends TypeOrmCrudService<Usuario> {
 
     const result = await this.repo.save(data);
 
-    if (result) {
-      const token = createToken({ ...result });
-      const html = `<a href="${process.env.API_BASE_URL}/usuarios/confirmar-email?token=${token}">Confirmar cadastro</a>`;
-      await sendEmail(result.email, 'Confirmação de cadastro', html, html);
-    }
+    // if (result) {
+    //   const token = createToken({ ...result });
+    //   const html = `<a href="${process.env.API_BASE_URL}/usuarios/confirmar-email?token=${token}">Confirmar cadastro</a>`;
+    //   await sendEmail(result.email, 'Confirmação de cadastro', html, html);
+    // }
 
     return { data: result };
   }
