@@ -11,6 +11,7 @@ import { ContaModule } from './modules/conta/conta.module';
 import { InstituicaoFinanceiraModule } from './modules/instituicao-financeira/instituicao-financeira.module';
 import { MovimentacaoModule } from './modules/movimentacao/movimentacao.module';
 import { PessoaModule } from './modules/pessoa/pessoa.module';
+import { PlanejamentoModule } from './modules/planejamento/planejamento.module';
 import { TipoContaModule } from './modules/tipo-conta/tipo-conta.module';
 import { TipoMovimentacaoModule } from './modules/tipo-movimentacao/tipo-movimentacao.module';
 import { UsuarioModule } from './modules/usuario/usuario.module';
@@ -27,7 +28,7 @@ import { UsuarioModule } from './modules/usuario/usuario.module';
       database: process.env.DB_NAME,
       port: Number(process.env.DB_PORT),
       autoLoadEntities: true,
-      synchronize: Number(process.env.SYNCHRONIZE) ? true : false,
+      synchronize: true,//Number(process.env.SYNCHRONIZE) ? true : false,
       ssl: {
         rejectUnauthorized: false
       },
@@ -39,7 +40,8 @@ import { UsuarioModule } from './modules/usuario/usuario.module';
     InstituicaoFinanceiraModule,
     TipoContaModule,
     ContaModule,
-    MovimentacaoModule
+    MovimentacaoModule,
+    PlanejamentoModule
   ],
   controllers: [AppController],
   providers: [
