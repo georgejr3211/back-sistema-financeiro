@@ -10,6 +10,7 @@ import { CategoriaModule } from './modules/categoria/categoria.module';
 import { ContaModule } from './modules/conta/conta.module';
 import { InstituicaoFinanceiraModule } from './modules/instituicao-financeira/instituicao-financeira.module';
 import { MovimentacaoModule } from './modules/movimentacao/movimentacao.module';
+import { ObjetivoModule } from './modules/objetivo/objetivo.module';
 import { PessoaModule } from './modules/pessoa/pessoa.module';
 import { PlanejamentoModule } from './modules/planejamento/planejamento.module';
 import { TipoContaModule } from './modules/tipo-conta/tipo-conta.module';
@@ -41,7 +42,8 @@ import { UsuarioModule } from './modules/usuario/usuario.module';
     TipoContaModule,
     ContaModule,
     MovimentacaoModule,
-    PlanejamentoModule
+    PlanejamentoModule,
+    ObjetivoModule
   ],
   controllers: [AppController],
   providers: [

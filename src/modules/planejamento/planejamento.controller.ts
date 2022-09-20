@@ -1,8 +1,9 @@
-import { Planejamento } from '../../entities/planejamento.entity';
 import { Controller } from '@nestjs/common';
-import { PlanejamentoService } from './planejamento.service';
-import { Crud } from '@nestjsx/crud';
 import { ApiTags } from '@nestjs/swagger';
+import { Crud } from '@nestjsx/crud';
+
+import { Planejamento } from '../../entities/planejamento.entity';
+import { PlanejamentoService } from './planejamento.service';
 
 @Crud({
   model: {
